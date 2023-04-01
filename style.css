@@ -18,14 +18,55 @@ header{
     justify-content: space-between;
 }
 main {
-    background: url("https://images.pexels.com/photos/11767266/pexels-photo-11767266.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+    background: url("./assets/bg1.jpg") center/cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 100s linear infinite 20s;
+    /* animation-timing-function: ease-in-out; */
+}
+@keyframes slideBg {
+    0% {
+        background: url("./assets/bg1.jpg") center/cover;
+    }
+    
+    10% {
+        background: url("./assets/bg2.jpg") center/cover;
+    }
+    20% {
+        background: url("./assets/bg3.jpg") center/cover;
+    }
+    30% {
+        background: url("./assets/bg4.jpg") center/cover;
+    }
+    40% {
+        background: url("./assets/bg5.jpg") center/cover;
+    }
+    50% {
+        background: url("./assets/bg5.jpg") center/cover;
+    }
+    
+    60% {
+        background: url("./assets/bg6.jpg") center/cover;
+    }
+    70% {
+        background: url("./assets/bg7.jpg") center/cover;
+    }
+    80% {
+        background: url("./assets/bg8.jpg") center/cover;
+    }
+    90% {
+        background: url("./assets/bg9.jpg") center/cover;
+    }
+    100% {
+        background: url("./assets/bg1.jpg") center/cover;
+    }
+
 }
 #myName{
-    font-size: 20px;
+    font-size: 50px;
     margin-inline: 30px;
+    margin-block: 20px;
     color: white;
-    /* text-shadow: 1px 1px 1px lightgray;
-    text-transform: uppercase; */
     font-family: 'Libre Barcode 39 Text', cursive;
 }
 
@@ -48,16 +89,20 @@ main {
     text-shadow: 1px 1px 1px #b7a57a;
 }
 .nav a:hover {
-    text-shadow: 0 0 50px aqua;
+    color: #b7a57a;
+    box-shadow: 0 0 50px #4b2e83;
 }
 /* _______________________________________________________ */
 .section1{
     /* background-color: aqua; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     /* padding: 55px 0; */
     padding-block: 100px;
+}
+.section1 div {
+    margin-inline: 70px;
 }
 
 #avatar {
@@ -77,6 +122,15 @@ main {
     font-family: 'Big Shoulders Display', cursive;
     width: 800px;
     letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#aboutMe p {
+    text-align: center;
+    background: #353b485e;
+    padding: 20px;
 }
 
 #highLine1{
@@ -88,7 +142,24 @@ main {
     color: #4b2e83;
     text-shadow: 1px 1px 1px #b7a57a;
 }
-
+#resumeBtn {
+    max-width: 10em;
+    font-size: 20px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 3px solid #4b2e83;
+    padding: 15px;
+    border-style: double;
+    
+}
+#resumeBtn a {
+    color: #b7a57a;
+    font-family: 'Source Code Pro', monospace;
+}
+#resumeBtn:hover{
+    box-shadow: 0 0 50px #4b2e83;
+    background-color: #4b2e83;
+}
 /* _______________________________________________________ */
 .section2{
     display: flex;
@@ -253,12 +324,14 @@ main {
 }
 .timeBox h2 {
     margin: 0;
+    font-family: 'DM Serif Display', serif;
 }
 .timeBox h3 {
     margin: 0;
 }
 .timeBox p {
     margin: 0;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 /* _______________________________________________________ */
@@ -269,7 +342,11 @@ main {
     padding-block: 100px;
     /* margin-block: 100px; */
 }
-
+.section3 h2 {
+    text-shadow: 2px 2px 2px #4b2e83;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
 #myWork {
     font-size: 50px;
     text-align: center;
